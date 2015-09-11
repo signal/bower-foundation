@@ -206,6 +206,9 @@
           validations = [],
           form = this.S(el_patterns[0][0]).closest('[data-' + this.attr_name(true) + ']'),
           settings = form.data(this.attr_name(true) + '-init') || {};
+      if (i == 0) {
+        return validations;
+      }
       while (i--) {
         var el = el_patterns[i][0],
             required = el_patterns[i][2],
